@@ -5,8 +5,6 @@ import java.util.Arrays;
 public class Ejercicio31 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		//VARIABLE
 		int[] array1 = {5,6,2,4,8};
 		int[] array2 = {2,3,7};
@@ -16,9 +14,7 @@ public class Ejercicio31 {
 		arrayConcatenado = concatenacion(array1, array2);
 		
 		//SALIDA
-		for(int aux : arrayConcatenado){
-			System.out.print(aux +" ");
-		}
+		imprimirArray(arrayConcatenado);
 		
 	}
 	public static int[] concatenacion(int[] array1, int[] array2){
@@ -31,6 +27,21 @@ public class Ejercicio31 {
 		} 
 		
 		return result;
+	}
+	
+	/**
+	 * Funcion para imprimir un array por pantalla
+	 * @param array
+	 */
+	public static void imprimirArray(int[] array){
+		System.out.print("[");
+		for(int i = 0; i < array.length; i++){
+			System.out.print(array[i]);
+			if (i != array.length - 1){
+				System.out.print(",");
+			}
+		}
+		System.out.print("]");
 	}
 
 }
